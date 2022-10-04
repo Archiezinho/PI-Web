@@ -1,0 +1,136 @@
+#header{
+    background: hsl(260, 18%, 10%) ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    text-align: justify;
+}
+/* header liks aparencia */
+#header a{
+    color:#9b98e7;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+/* header links quando passar o mouse */
+#nav a:hover{
+    background:rgba(0,0 ,0 , .3);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+/* logotipo */
+#logo img{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+/* nav */
+#nav{
+    display: flex;
+    align-items: center;
+}
+/* menu mobile */
+@media  screen and (max-width: 499px) {
+    /* menu do nav */
+    #menu{
+        display: block;
+        list-style: none;
+        gap: .5rem;
+        position: absolute;
+        width: 100%;
+        top: 54px;
+        right: 0px;
+        transition: 0.6s;
+        height: 0px;
+        background-color: #232122da;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+        border-bottom: #9b98e7 solid 1px; 
+        border-top: #9b98e7 solid 1px; 
+    }
+    /* class q faz o menu aparecer */
+    #nav.active #menu{
+        height: calc(130px - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    /* aparencia dos links do menu */
+    #menu .links{
+        display: block;
+        padding: 1rem 0;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+    /* botão mobile */
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #9b98e7;
+        gap: .5rem;
+    }
+    /* fazer as 3 barrinhas */
+    #barras{
+        border-top: 4px solid;
+        width: 30px;
+    }
+    #barras:after, #barras::before{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .5s;
+        position: relative;
+    }
+    /* fim das 3 barrinhas */
+    /* fazer as 3 barrinhas girarem quando clicar */
+    nav.active #barras{
+        border-top-color: transparent;
+        transition: .25s;
+    }
+    nav.active #barras:before{
+        transform: rotate(135deg);
+    }
+    nav.active #barras:after{
+        transform: rotate(-135deg);
+        top: -9px;
+    }
+}
+    #login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+@media screen and (min-width: 500px) {
+    #menu{
+        display: flex;
+        list-style: none;
+        gap: .5rem;
+    }
+    #btn-mobile{
+        display: none;
+    }
+    #menu .links{
+        padding: 1rem 2rem;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    nav a:first-child{
+        margin-right: 5vw;
+    }
+}

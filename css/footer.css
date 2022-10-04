@@ -1,0 +1,75 @@
+/*footer*/
+#footer{
+    margin-top: -18px;
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    text-align: center;
+    background-color:hsl(260, 18%, 10%);
+    font-size: 14px;
+    text-align: justify;
+}
+/*aviso*/
+#footer #Aviso{
+    border: 1px;
+    border-color: white;
+    border-bottom-style: solid;
+    margin: 15 20 0 20;
+    order: -2;
+}
+/*links*/
+#footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+/*links*/
+#footer address{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    margin-left: 10px;
+    margin-right: 10px;
+    order: -1;
+}
+/*copyright*/
+#footer #inutil{
+    margin-top: 20px;
+}
+/*logo*/
+#footer figure img{
+    margin-top: 10px;
+    width: 100px;
+}
+/*fotos do zap e do e-mail*/
+#footer address img{
+    height: 20px;
+}
+@media screen and (min-width: 736px){
+    /*footer*/
+    #footer{
+        justify-content: space-around;
+        font-size: 16px;
+    }
+    /*links*/
+    #footer address{
+        order: 0;
+    }
+}
+@media screen and (min-width: 1050px){
+    /*footer*/
+    #footer{
+        justify-content: space-around;
+        font-size: 18px;
+    }
+    /*links*/
+    #footer address{
+        order: 0;
+    }
+}

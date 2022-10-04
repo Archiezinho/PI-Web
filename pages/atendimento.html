@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento</title>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+    <style>
+        /*body*/
+        body {
+            margin: auto;
+            text-align: justify;
+            background-color: #9b98e7;
+        }
+        /*main*/
+        main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+            align-items: center;
+        }
+        /* links aumentarem */
+        main a:hover{
+            transform: scale(105%);
+        }
+        /*div nossos serviços*/
+        #atendimento{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            color: #9b98e7;
+            text-align: center;
+            font-weight: bolder;
+            background-color:hsl(260, 18%, 10%);
+            margin: 30px 0 50px 0;
+        }
+        /*h1*/
+        #atendimento h1{
+            font-size: 35px;
+        }
+        /*p*/
+        #atendimento p{
+            font-size: 18px;
+            padding: 0 10 0 10;
+        }
+        /*tipos de atendimento*/
+        #atendimento img{
+            width: 40%; 
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        @media screen and (min-width: 736px){
+            /*div nossos serviços*/
+        #atendimento {
+            padding-bottom: 50px;
+        }
+        /*div com os tipos de atendimento*/
+        #tipos-atendimento{
+            display: flex;
+            align-items: center;
+            height: 700px;
+            max-height: 700px;
+        }
+        /*tipos de serviço*/
+        #atendimento img{
+            display: inline;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+            width: 300px;
+        }
+        /*ele aumentar se passar o mouse*/
+        #atendimento img:hover{
+            transform: scale(110%);
+        }
+        }
+        @media screen and (min-width: 1050px){
+            /*div nossos serviços*/
+        #atendimento {
+            padding-bottom: 50px;
+        }
+        /*h1*/
+        #atendimento h1{
+            font-size: 45px;
+        }
+        /*p*/
+        #atendimento p{
+            font-size: 25px;
+        }
+        /*div com os tipos de atendimento*/
+        #tipos-atendimento{
+            display: flex;
+            align-items: center;
+            height: 700px;
+            max-height: 700px;
+        }
+        /*tipos de serviço*/
+        #atendimento img{
+            display: inline;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+            width: 350px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <a href="../index.html" id="logo"><img src="../images/Logo2.png" alt=""></a>
+        <nav id="nav">
+            <button id="btn-mobile" aria-expanded="false" 
+            aria-haspopup="true" aria-label="Abrir menu" 
+            aria-controls="menu">
+                <span id="barras"></span>
+            </button>
+            <ul id="menu" role="menu"> 
+                <li>
+                    <a class="links" href="atendimento.html">Atendimento</a>
+                </li>
+                <li>
+                    <a class="links" href="psicologios.html">Psicólogos</a>
+                </li>
+                <li>
+                    <a class="links" href="sobre.html">Sobre</a>
+                </li>
+                <li id="login">
+                    <a class="links" href="login.html">Logar</a>
+                    <a class="links" href="criar_conta.html">Cadastrar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="atendimento">
+            <div>
+                <h1>Nossos serviços</h1>
+                <p> 
+                    A Happy Mind não influencia e não se responsabiliza 
+                    pelos valores cobrados pelos profissionais.
+                </p>     
+            </div>
+            <!--tipos de serviço-->
+            <div id="tipos-atendimento">
+                <a href=""><img src="../images/Chat.jpg" alt=""></a>
+                <a href=""><img src="../images/VdChamada.jpg" alt=""></a>
+            </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <!--aviso-->
+        <p id="Aviso">
+            ATENÇÃO: Este portal não oferece atendimento de urgência para 
+            casos relacionados a crises suicidas. Nestes casos, entre em 
+            contato gratuitamente com o CVV (Centro de Valorização da Vida)
+            pelo telefone 188 ou acesse www.cvv.org.br. Em caso de 
+            emergências, busque o hospital mais próximo ou ligue 192 
+            (SAMU).
+        </p>
+        <!--logotipo do footer-->
+        <figure>
+            <img src="../images/logo2.png" alt="logo">
+        </figure>
+        <!--e-mail-->
+        <address>
+            <img src="../images/E-mail.png" alt="E-mail">
+            <a href="">Contato@HappyMind.com</a> 
+        </address>
+        <!--whats-->
+        <address>
+            <img src="../images/Zap.png" alt="whatsapp">
+            <a href="">13 99612-1231</a>
+        </address>
+        <!--copyright-->
+        <p id="Inutil">desenvolvido por turma TI-42</p>
+    </footer>
+    <script src="../js/btnmobile.js"></script>
+</body>
+</html>
