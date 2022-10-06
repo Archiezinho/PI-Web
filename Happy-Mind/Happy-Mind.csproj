@@ -93,7 +93,6 @@
     <Content Include="images\VdChamada.jpg" />
     <Content Include="images\Zap.png" />
     <Content Include="js\btnmobile.js" />
-    <Content Include="js\calendar.js" />
     <Content Include="js\validacao.js" />
     <Content Include="pages\cadastro-consulta.aspx" />
     <Content Include="pages\cadastro-psicologo.aspx" />
