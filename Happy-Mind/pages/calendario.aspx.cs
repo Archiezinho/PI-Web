@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
+using Happy_Mind.classes;
 
 namespace Happy_Mind.pages
 {
@@ -21,49 +21,18 @@ namespace Happy_Mind.pages
         {
             if (Session["data"] != null)
             {
-                try
+                consulta Consulta = new consulta();
+                Consulta.construtor(Convert.ToInt32(Session["idP"]), Session["nome"].ToString(), Session["email"].ToString(), Session["dtNascimento"].ToString(), Session["data"].ToString(), Session["hora"].ToString(), Convert.ToDecimal(Session["rg"].ToString()), Convert.ToDecimal(Session["telefone"]));
+
+                if (Consulta.inserir() == "")
                 {
-                    SqlConnection conexao = new SqlConnection();
-                    //ConfigurationManager.ConnectionStrings["stringDeComando"].ConnectionString.ToString()
-
-
-
-                    SqlCommand cmd = new SqlCommand();
-
-
-
-                    cmd.CommandText = "pi_consulta";
-
-                    cmd.Connection = conexao;
-
-
-
-                    cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("idPsicologo", Convert.ToInt32(Session["id"]));
-                    cmd.Parameters.AddWithValue("nome", Session["nome"].ToString());
-                    cmd.Parameters.AddWithValue("rg", Convert.ToDecimal(Session["rg"].ToString()));
-                    cmd.Parameters.AddWithValue("email", Session["email"].ToString());
-                    cmd.Parameters.AddWithValue("telefone", Convert.ToDecimal(Session["telefone"]));
-                    cmd.Parameters.AddWithValue("dtNascimento", Convert.ToDateTime(Session["dtNascimento"]));
-                    cmd.Parameters.AddWithValue("data", Convert.ToDateTime(Session["data"]));
-                    cmd.Parameters.AddWithValue("hora", Session["hora"].ToString());
-
-                    conexao.Open();
-                    cmd.ExecuteNonQuery();
-                    conexao.Close();
-
                     Session.Clear();
-
                     Response.Write("Consulta marcada!!");
                     Response.Redirect("../default.html");
                 }
-                catch (SqlException)
+                else
                 {
-                    Response.Write("Problemas com acesso ao banco de dados!!!");
-                }
-                catch (Exception)
-                {
-                    Response.Write("Erro desconhecido!!!");
+                    Response.Write(Consulta.inserir());
                 }
             }
             else

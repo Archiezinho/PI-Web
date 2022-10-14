@@ -104,6 +104,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\consulta.cs" />
+    <Compile Include="classes\psicologo.cs" />
     <Compile Include="pages\cadastro-consulta.aspx.cs">
       <DependentUpon>cadastro-consulta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
