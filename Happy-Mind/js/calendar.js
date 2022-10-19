@@ -93,5 +93,5 @@ function active(dia) {
     document.getElementById('d'+ dia).classList.toggle('active');
     vardia = dia;
     data = dia + '/' + mes + '/' + ano;
-    document.getElementById('frame').src = 'horarios.html?data='+ data;
+    document.getElementById('frame').src = 'horarios.aspx?data=' + data;
 }
