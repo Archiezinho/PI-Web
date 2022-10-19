@@ -317,30 +317,30 @@ namespace Happy_Mind.pages
 
         protected void LimparActive()
         {
-            Button1.CssClass = "";
-            Button2.CssClass = "";
-            Button3.CssClass = "";
-            Button4.CssClass = "";
-            Button5.CssClass = "";
-            Button6.CssClass = "";
-            Button7.CssClass = "";
-            Button8.CssClass = "";
-            Button9.CssClass = "";
-            Button10.CssClass = "";
-            Button11.CssClass = "";
-            Button12.CssClass = "";
-            Button13.CssClass = "";
-            Button14.CssClass = "";
-            Button15.CssClass = "";
-            Button16.CssClass = "";
-            Button17.CssClass = "";
-            Button18.CssClass = "";
-            Button19.CssClass = "";
-            Button20.CssClass = "";
-            Button21.CssClass = "";
-            Button22.CssClass = "";
-            Button23.CssClass = "";
-            Button24.CssClass = "";
+            Button1.CssClass = "hora";
+            Button2.CssClass = "hora";
+            Button3.CssClass = "hora";
+            Button4.CssClass = "hora";
+            Button5.CssClass = "hora";
+            Button6.CssClass = "hora";
+            Button7.CssClass = "hora";
+            Button8.CssClass = "hora";
+            Button9.CssClass = "hora";
+            Button10.CssClass = "hora";
+            Button11.CssClass = "hora";
+            Button12.CssClass = "hora";
+            Button13.CssClass = "hora";
+            Button14.CssClass = "hora";
+            Button15.CssClass = "hora";
+            Button16.CssClass = "hora";
+            Button17.CssClass = "hora";
+            Button18.CssClass = "hora";
+            Button19.CssClass = "hora";
+            Button20.CssClass = "hora";
+            Button21.CssClass = "hora";
+            Button22.CssClass = "hora";
+            Button23.CssClass = "hora";
+            Button24.CssClass = "hora";
         }
     }
 }

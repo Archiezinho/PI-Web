@@ -62,8 +62,14 @@
     td:hover{
         background-color: rgba(255, 255, 255, 0.6);
     }
-    td.active{
+    .active{
         background-color: rgba(255, 255, 255, 0.6);
+        border: none;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        color: hsl(260, 18%, 10%);
+        font-weight: bold;
     }
     .horario td{
         display: flex;
