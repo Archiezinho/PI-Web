@@ -11,6 +11,7 @@ namespace Happy_Mind.classes
         private int idP;
         private string nome, email, dtNascimento, data, hora;
         private decimal rg, telefone;
+        public string[] horas = new string[24];
 
         SqlConnection conexao = new SqlConnection();
         //ConfigurationManager.ConnectionStrings[0].ConnectionString.ToString()
@@ -39,6 +40,43 @@ namespace Happy_Mind.classes
 
                 conexao.Open();
                 cmd.ExecuteNonQuery();
+                conexao.Close();
+
+                return "";
+            }
+            catch (SqlException)
+            {
+                return "Problemas com acesso ao banco de dados!!!";
+            }
+            catch (Exception)
+            {
+                return "Erro desconhecido!!!";
+            }
+        }
+        public string selectComData(string dataS)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                SqlDataReader leitor;
+
+                cmd.CommandText = "select * from where hora = "+ Convert.ToDateTime(dataS);
+                //cmd.CommandType = CommandType.Text;
+                cmd.Connection = conexao;
+
+                conexao.Open();
+                leitor = cmd.ExecuteReader();
+
+                if (leitor.HasRows)
+                {
+                    int cont = 1;
+                    while (leitor.Read())
+                    {
+                        horas[cont] = leitor.GetString(8);
+                        cont++;
+                    }
+                }
+
                 conexao.Close();
 
                 return "";

@@ -19,7 +19,7 @@ namespace Happy_Mind.pages
         }
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            if (Session["data"] != null)
+            if (Session["hora"] != null)
             {
                 consulta Consulta = new consulta();
                 Consulta.construtor(Convert.ToInt32(Session["idP"]), Session["nome"].ToString(), Session["email"].ToString(), Session["dtNascimento"].ToString(), Session["data"].ToString(), Session["hora"].ToString(), Convert.ToDecimal(Session["rg"].ToString()), Convert.ToDecimal(Session["telefone"]));

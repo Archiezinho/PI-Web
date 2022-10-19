@@ -8,9 +8,16 @@ namespace Happy_Mind.classes
 {
     public class psicologo
     {
-        public int id;
-        public string nome, email, descricao, imgPerfil, senha;
-        public decimal cpf, telefone, cfp, nota;
+        public int id { get; set; }
+        public string nome { get; set; }
+        public string email { get; set; }
+        public string descricao { get; set; }
+        public string imgPerfil { get; set; }
+        public string senha { get; set; }
+        public decimal cpf { get; set; }
+        public decimal telefone { get; set; }
+        public decimal cfp { get; set; }
+        public decimal nota { get; set; }
 
         public void construtor(int idC, string nomeC, decimal cpfC, string emailC, decimal telefoneC, decimal cfpC, string descricaoC, decimal notaC, string imgPerfilC, string senhaC)
         {

@@ -29,11 +29,11 @@
     table.horario td,
     table.horario th{
         border: 1px solid black;
-        padding: 15px;
         cursor: pointer;
     }
     table.horario th {
         text-align: center;
+        padding: 15px;
     }
     table.horario thead th,
     table.horario tbody th{
@@ -59,15 +59,28 @@
     table.horario p.indisp{
         color: red;
     }
-    th:hover ~ td, td:hover{
+    td:hover{
         background-color: rgba(255, 255, 255, 0.6);
     }
-    th.active ~ td{
+    td.active{
         background-color: rgba(255, 255, 255, 0.6);
+    }
+    .horario td{
+        display: flex;
+    }
+    .hora{
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        color: hsl(260, 18%, 10%);
+        font-weight: bold;
     }
     </style>
 </head>
 <body>
+    <form runat="server">
     <table class="horario">
         <thead>
             <tr>
@@ -76,126 +89,104 @@
             </tr>
         </thead>
         <tbody>
-            <tr  onclick="active('0')"> 
-                <th id="h0">00:00</th>  
-                <td><p></p></td>                        
+            <tr> 
+                <th>00:00</th>  
+                <td><asp:Button ID="Button1" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button1_Click"/></td>                  
             </tr>
-            <tr  onclick="active('1')">
-                <th id="h1">01:00</th>
-                <td><p></p></td>                        
+            <tr>
+                <th>01:00</th>
+                <td><asp:Button ID="Button2" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button2_Click"/></td>                        
             </tr>
-            <tr  onclick="active('2')">
-                <th  id="h2">02:00</th>  
-                <td><p></p></td>                         
+            <tr>
+                <th>02:00</th>  
+                <td><asp:Button ID="Button3" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button3_Click"/></td>                         
             </tr>
-            <tr  onclick="active('3')">
-                <th id="h3">03:00</th>  
-                <td><p></p></td>                        
+            <tr>
+                <th>03:00</th>  
+                <td><asp:Button ID="Button4" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button4_Click"/></td>                        
             </tr>
-            <tr  onclick="active('4')">
-                <th id="h4">04:00</th>  
-                <td><p></p></td>                       
+            <tr>
+                <th>04:00</th>  
+                <td><asp:Button ID="Button5" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button5_Click"/></td>                       
             </tr>
-            <tr onclick="active('5')">
-                <th id="h5">05:00</th> 
-                <td><p></p></td>                          
+            <tr>
+                <th>05:00</th> 
+                <td><asp:Button ID="Button6" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button6_Click"/></td>                          
             </tr>
-             <tr onclick="active('6')">
-                <th id="h6">06:00</th>
-                <td><p></p></td>                          
+             <tr>
+                <th>06:00</th>
+                <td><asp:Button ID="Button7" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button7_Click"/></td>                          
             </tr>
-            <tr onclick="active('7')">
-                <th id="h7">07:00</th>  
-                <td><p></p></td>                        
+            <tr>
+                <th>07:00</th>  
+                <td><asp:Button ID="Button8" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button8_Click"/></td>                        
             </tr>
-            <tr onclick="active('8')">
-                <th id="h8">08:00</th>  
-                <td><p></p></td>              
+            <tr>
+                <th>08:00</th>  
+                <td><asp:Button ID="Button9" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button9_Click"/></td>              
             </tr>
-            <tr onclick="active('9')">
-                <th id="h9">09:00</th>
-                <td><p></p></td>                     
+            <tr>
+                <th>09:00</th>
+                <td><asp:Button ID="Button10" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button10_Click"/></td>                     
             </tr>
-            <tr onclick="active('10')">
-                <th id="h10">10:00</th> 
-                <td><p></p></td>                    
+            <tr>
+                <th>10:00</th> 
+                <td><asp:Button ID="Button11" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button11_Click"/></td>                    
             </tr>
-            <tr onclick="active('11')">
-                <th id="h11">11:00</th>  
-                <td><p></p></td>                
+            <tr>
+                <th>11:00</th>  
+                <td><asp:Button ID="Button12" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button12_Click"/></td>                
             </tr>
-            <tr onclick="active('12')">
-                <th id="h12">12:00</th>   
-                <td><p></p></td>             
+            <tr>
+                <th>12:00</th>   
+                <td><asp:Button ID="Button13" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button13_Click"/></td>             
             </tr>
-            <tr onclick="active('13')">
-                <th  id="h13">13:00</th>    
-                <td><p></p></td>                   
+            <tr>
+                <th>13:00</th>    
+                <td><asp:Button ID="Button14" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button14_Click"/></td>                   
             </tr>
-            <tr onclick="active('14')">
-                <th id="h14">14:00</th>   
-                <td><p></p></td>                   
+            <tr>
+                <th>14:00</th>   
+                <td><asp:Button ID="Button15" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button15_Click"/></td>                   
             </tr>
-            <tr onclick="active('15')">
-                <th id="h15">15:00</th>  
-                <td><p></p></td>                      
+            <tr>
+                <th>15:00</th>  
+                <td><asp:Button ID="Button16" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button16_Click"/></td>                      
             </tr>
-            <tr onclick="active('16')">
-                <th id="h16">16:00</th>  
-                <td><p></p></td>                        
+            <tr>
+                <th>16:00</th>  
+                <td><asp:Button ID="Button17" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button17_Click"/></td>                        
             </tr>
-            <tr onclick="active('17')">
-                <th id="h17">17:00</th>  
-                <td><p></p></td>                 
+            <tr>
+                <th>17:00</th>  
+                <td><asp:Button ID="Button18" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button18_Click"/></td>                 
             </tr>
-            <tr onclick="active('18')">
-                <th id="h18">18:00</th> 
-                <td><p></p></td>                    
+            <tr>
+                <th>18:00</th> 
+                <td><asp:Button ID="Button19" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button19_Click"/></td>                    
             </tr>
-            <tr onclick="active('19')">
-                <th id="h19">19:00</th>  
-                <td><p></p></td>                 
+            <tr>
+                <th>19:00</th>  
+                <td><asp:Button ID="Button20" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button20_Click"/></td>                 
             </tr>
-            <tr onclick="active('20')">
+            <tr>
                 <th>20:00</th>  
-                <td><p id="h20"></p></td>                   
+                <td><asp:Button ID="Button21" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button21_Click"/></td>                   
             </tr>
-            <tr onclick="active('21')">
-                <th id="h21">21:00</th> 
-                <td><p></p></td>                     
+            <tr>
+                <th>21:00</th> 
+                <td><asp:Button ID="Button22" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button22_Click"/></td>                     
             </tr>
-            <tr onclick="active('22')">
-                <th id="h22">22:00</th>   
-                <td><p></p></td>     
+            <tr>
+                <th>22:00</th>   
+                <td><asp:Button ID="Button23" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button23_Click"/></td>     
             </tr>
-            <tr onclick="active('23')">
-                <th id="h23">23:00</th>     
-                <td><p></p></td>                 
+            <tr>
+                <th>23:00</th>     
+                <td><asp:Button ID="Button24" runat="server" Text="Disponivel" CssClass="hora" OnClick="Button24_Click"/></td>                 
             </tr>
         </tbody>
     </table>
-
-<script>
-    let conthora = 0;
-    function horarios(){
-        while(conthora <24){
-            if(document.getElementById('h'+conthora).textContent == 'Disponivel'){
-                document.getElementById('h'+conthora).classList.add('disp');
-            }
-            else{
-                document.getElementById('h'+conthora).classList.add('indisp');
-            }
-            conthora ++;
-        }
-    }
-    let varhora = 24;
-    function active(hora) {
-        if (varhora != 24) {
-            document.getElementById('h'+ varhora).classList.remove('active');
-        }
-        document.getElementById('h'+ hora).classList.toggle('active');
-        varhora = hora;
-    }
-</script>
+    </form>
 </body>
 </html>

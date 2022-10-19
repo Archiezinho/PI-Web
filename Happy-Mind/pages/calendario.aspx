@@ -283,7 +283,7 @@
       </ul>
     </div>
     <div>
-      <iframe id="frame" src="horarios.aspx" frameborder="0"></iframe>
+      <iframe id="frame" frameborder="0"></iframe>
     </div>
   </main>
     <form runat="server">
