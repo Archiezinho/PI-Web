@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
 
 namespace Happy_Mind.classes
 {
@@ -13,8 +15,7 @@ namespace Happy_Mind.classes
         private decimal rg, telefone;
         public string[] horas = new string[24];
 
-        SqlConnection conexao = new SqlConnection();
-        //ConfigurationManager.ConnectionStrings[0].ConnectionString.ToString()
+        SqlConnection conexao = new SqlConnection(ConfigurationManager.ConnectionStrings[0].ConnectionString.ToString());
 
         public void construtor(int idPC, string nomeC,string emailC, string dtNascimentoC, string dataC, string horaC, decimal rgC, decimal telefoneC)
         {
@@ -35,7 +36,7 @@ namespace Happy_Mind.classes
                 SqlCommand cmd = new SqlCommand();
 
                 cmd.CommandText = "insert into consulta values(" + idP + "," + nome + "," + rg + "," + telefone + "," + email + "," + Convert.ToDateTime(dtNascimento) + "," + Convert.ToDateTime(data) + "," + hora + ")";
-                //cmd.CommandType = CommandType.Text;
+                cmd.CommandType = CommandType.Text;
                 cmd.Connection = conexao;
 
                 conexao.Open();
@@ -60,8 +61,8 @@ namespace Happy_Mind.classes
                 SqlCommand cmd = new SqlCommand();
                 SqlDataReader leitor;
 
-                cmd.CommandText = "select * from where hora = "+ Convert.ToDateTime(dataS);
-                //cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from where dataConsulta = "+ Convert.ToDateTime(dataS) +" and idP ="+ idP;
+                cmd.CommandType = CommandType.Text;
                 cmd.Connection = conexao;
 
                 conexao.Open();

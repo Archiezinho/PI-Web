@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
 
 namespace Happy_Mind.classes
 {
@@ -33,8 +35,7 @@ namespace Happy_Mind.classes
             nota = notaC;
         }
 
-        SqlConnection conexao = new SqlConnection();
-        //ConfigurationManager.ConnectionStrings[0].ConnectionString.ToString()
+        SqlConnection conexao = new SqlConnection(ConfigurationManager.ConnectionStrings[0].ConnectionString.ToString());
 
         public string inserir()
         {
@@ -43,7 +44,7 @@ namespace Happy_Mind.classes
                 SqlCommand cmd = new SqlCommand();
 
                 cmd.CommandText = "insert into psicologo values(" + nome + "," + cpf + "," + email + "," + telefone + "," + cfp + "," + descricao + "," + nota + "," + imgPerfil + "," + senha + ")";
-                //cmd.CommandType = CommandType.Text;
+                cmd.CommandType = CommandType.Text;
                 cmd.Connection = conexao;
 
                 conexao.Open();
@@ -70,7 +71,7 @@ namespace Happy_Mind.classes
                 SqlDataReader leitor;
 
                 cmd.CommandText = "select * from psicologo where nome = " + nome;
-                //cmd.CommandType = CommandType.Text;
+                cmd.CommandType = CommandType.Text;
                 cmd.Connection = conexao;
 
                 conexao.Open();
