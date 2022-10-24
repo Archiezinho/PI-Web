@@ -4,10 +4,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Cadastrar consulta</title>
 </head>
 <body>
@@ -18,34 +18,37 @@
             <div class="card-criar-conta">
                 <div class="textfield">
                     <label for="nome-completo">Digite nome completo:</label>
-                    <input type="text" autocomplete="off" name="nome-completo" id="Nomeconsulta">
-                    <br><small id="avisoN"></small>
+                    <asp:TextBox ID="Nomeconsulta" runat="server" autocomplete="off"></asp:TextBox>
+                    <br />
+                    <small id="avisoN"></small>
 
                 </div>
                 <div class="textfield">
                     <label for="rg-consulta">Digite seu RG:</label>
-                    <input type="text" autocomplete="off" name="rg-consulta" id="RGconsulta"
-                        placeholder="00.000.000-0">
-                    <br><small id="avisoC"></small>
+                    <asp:TextBox ID="RGconsulta" runat="server" placeholder="00.000.000-0" autocomplete="off"></asp:TextBox>
+                    <br />
+                    <small id="avisoC"></small>
                 </div>
 
                 <div class="textfield">
                     <label for="telefone-consulta">Digite seu Telefone:</label>
-                    <input type="text" autocomplete="off" name="telefone-consulta" id="Telefoneconsulta"
-                        placeholder="00 00000-0000">
-                    <br><small id="avisoT"></small>
+                    <asp:TextBox ID="Telefoneconsulta" runat="server" placeholder="00 00000-0000" autocomplete="off"></asp:TextBox>
+                    <br />
+                    <small id="avisoT"></small>
                 </div>
                 <div class="textfield">
-                    <label for="email-consulta"> digite seu Email:</label>
-                    <input type="text" autocomplete="off" name="email-consulta" id="Emailconsulta" placeholder="email@email.com">
-                    <br><small id="avisoE"></small>
+                    <label for="email-consulta">digite seu Email:</label>
+                    <asp:TextBox ID="Emailconsulta" runat="server" placeholder="email@email.com" autocomplete="off" name="email-consulta"></asp:TextBox>
+                    <br />
+                    <small id="avisoE"></small>
                 </div>
                 <div class="textfield">
                     <label for="data_nascimento-consulta">Data De Nascimento</label>
-                    <input type="date" autocomplete="off" name="data_nascimento-consulta" id="DataNascimentoconsulta">
-                    <br><small id="avisoNA"></small>
+                    <asp:TextBox ID="DataNascimentoconsulta" runat="server" name="data_nascimento-consulta"></asp:TextBox>
+                    <br />
+                    <small id="avisoNA"></small>
                 </div>
-                <button class="btn-login">Marcar consulta</button>
+                <asp:Button class="btn-login" ID="Button1" runat="server" Text="Marcar consulta" OnClick="Button1_Click" />
             </div>
         </form>
     </main>

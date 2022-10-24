@@ -14,38 +14,39 @@
 <body>
     <a href="perfil.html" id="voltar">Voltar</a>
     <main id="criar-conta">
-        <form id="formulario-criar-conta" name="form" onsubmit="return validarCadastro()" action="../default.html">
+        <form id="form1" runat="server" name="form" onsubmit="return validarCadastro()" action="../default.html">
             <h1>Mande seu formulário:</h1>
             <div class="card-criar-conta">
                 <div class="textfield">
-                    <label for="nome-psico">Seu Nome Completo:</label>
-                    <input type="text" autocomplete="off" name="nome_completo" id="nomeCadastro">
-                    <br><small id="txtaviso"></small>
+                    <asp:Label runat="server" for="nome-psico">Seu Nome Completo:</asp:Label>
+                    <asp:TextBox runat="server" type="text" autocomplete="off" name="nome_completo" id="nomeCadastro"></asp:TextBox>
+                    <br/><small id="txtaviso"></small>
                 </div>
                 <div class="textfield">
-                    <label for="cpf-psico">CPF:</label>
-                    <input type="text" autocomplete="off" name="nome_completo" id="CpfCadastro" placeholder="000000000/00">
-                    <br><small id="txtaviso1"></small>
+                    <asp:Label runat="server" for="cpf-psico">CPF:</asp:Label>
+                    <asp:TextBox runat="server" type="text" autocomplete="off" name="nome_completo" id="CpfCadastro" placeholder="000000000/00"></asp:TextBox>
+                    <br/><small id="txtaviso1"></small>
                 </div>
                 <div class="textfield">
-                    <label for="email-psico">Email:</label>
-                    <input type="text" autocomplete="off" name="email" id="EmailCadastro" placeholder="email@email.com">
-                    <br><small id="txtaviso2"></small>
+                    <asp:Label runat="server" for="email-psico">Email:</asp:Label>
+                    <asp:TextBox runat="server" type="text" autocomplete="off" name="email" id="EmailCadastro" placeholder="email@email.com"></asp:TextBox>
+                    <br/><small id="txtaviso2"></small>
                 </div>
                 <div class="textfield">
-                    <label for="telefone-psico">Seu Telefone de contato</label>
-                    <input type="text" autocomplete="off" name="nome_usuario" id="TelefoneCadastro" placeholder="00 00000-0000">
-                    <br><small id="txtaviso3"></small>
+                    <asp:Label runat="server" for="telefone-psico">Seu Telefone de contato</asp:Label>
+                    <asp:TextBox runat="server" type="text" autocomplete="off" name="nome_usuario" id="TelefoneCadastro" placeholder="00 00000-0000"></asp:TextBox>
+                    <br/><small id="txtaviso3"></small>
                 </div>
                 <div class="textfield">
-                    <label for="Cfp-psico">Seu CFP Profissional:</label>
-                    <input type="text" autocomplete="off" name="nome_usuario" id="CfpCadastro" placeholder="000.000.000-00">
-                    <br><small id="txtaviso4"></small>
+                    <asp:Label  runat="server" for="Cfp-psico">Seu CFP Profissional:</asp:Label>
+                    <asp:TextBox  runat="server" type="text" autocomplete="off" name="nome_usuario" id="CfpCadastro" placeholder="000.000.000-00"></asp:TextBox>
+                    <br/><small id="txtaviso4"></small>
+                    <asp:Button class="btn-login" ID="Button1" runat="server" text="Mandar Formulário" OnClick="botao_click"></asp:Button>
                 </div>
-
-                <button class="btn-login">Mandar Formulário</button>
             </div>
         </form>
+                
+         
     </main>
     <style>
         body {
